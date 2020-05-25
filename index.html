@@ -1,183 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="UTF-8">
 
-  
-  <title>DZY</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="DZY">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="DZY">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DZY">
-  
-    <link rel="alternate" href="/atom.xml" title="DZY" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <title>Practice</title>
+    <script language="JavaScript">
+        var sents = ["가는날이 장날이다",
+"가는 말이 고와야 오는 말이 곱지",
+"가랑비에 옷 젖는 줄 모른다",
+"가재는 게 편이다",
+"가지 많은 나무에 바람 잘 날이 없다",
+"같은 값이면 다홍치마",
+"고래 싸움에 새우등 터진다",
+"고슴도치도 제 새끼가 제일 곱다고 한다",
+"고양이 쥐 생각한다",
+"고양이한테 생선을 맡기다",
+"공든 탑이 무너지랴",
+"구르는 돌은 이끼가 안 낀다",
+"구슬이 서 말이라도 꿰어야 보배",
+"굼벵이도 구르는 재주가 있다",
+"귀에 걸면 귀걸이 코에 걸면 코걸이",
+"산도 금강산도 식후경",
+"까마귀 날자 배 떨어진다",
+"꼬리가 길면 밟힌다",
+"꿩 먹고 알 먹고",
+"떡이 커 보인다",
+"남의 잔치에 감 놓아라 배 놓아라 한다",
+"낫 놓고 ㄱ자도 모른다",
+"낮말은 새가 듣고 밤말은 쥐가 듣는다",
+"내 코가 석 자다",
+"다 된 죽에 코 빠졌다",
+"닭 잡아먹고 오리발 내놓기",
+"닭 쫓던 개 지붕 쳐다보듯 한다",
+"도둑이 제 발 저리다",
+"도랑 치고 가재 잡기",
+"도토리 키 재기",
+"돌다리도 두들겨 보고 건너라",
+"될성부른 나무는 떡잎부터 알아본다",
+"등잔 밑이 어둡다",
+"땅 짚고 헤엄치기",
+"마파람에 게 눈 감추듯",
+"먼 사촌보다 가까운 이웃이 낫다",
+"메뚜기도 유월이 한철이다",
+"모르면 약이요 아는게 병",
+"목구멍이 포도청이다",
+"목마른 사람이 우물 판다",
+"못 먹는 감 찔러나 본다",
+"무쇠도 갈면 바늘이 된다",
+"물에 빠진 사람 건져 놓으니까 내 봇짐 내라 한다",
+"미운 아이 떡 하나 더 준다",
+"믿는 도끼에 발등 찍힌다",
+"밑 빠진 독에 물 붓기",
+"바늘 가는 데 실 간다",
+"바늘 도둑이 소도둑 된다",
+"발 없는 말이 천 리 간다",
+"방귀 뀐 놈이 성낸다",
+"배보다 배꼽이 더 크다",
+"백지장도 맞들면 낫다",
+"번갯불에 콩 볶아 먹겠다",
+"벼 이삭은 익을수록 고개를 숙인다",
+"병 주고 약 준다",
+"그림의 떡",
+"보기 좋은 떡이 먹기도 좋다",
+"불난 집에 부채질한다",
+"사공이 많으면 배가 산으로 간다",
+"서당 개 삼 년에 풍월을 읊는다",
+"세 살 버릇이 여든까지 간다",
+"소 잃고 외양간 고친다",
+"소 귀에 경 읽기",
+"수박 겉 핥기"
+];
+        var choices = [];
+        var ans;
+        var wronglist = [];
+        var id;
+
+
+        function getallchoice() {
+            for (var i = 0;i < sents.length; i ++) {
+                var l = sents[i].split(" ");
+                for (k in l) {
+                    choices.push(l[k]);
+                }
+            }
+            // for (k in choices){
+            //     document.write("<p>" + choices[k] + "</p>");
+            // }
+            // document.write("<p>"+choices.length + "</p>");
+        }
+        function doright(){
+            alert("Right ^_^");document.open();
+            display();
+        }
+        function dowrong(){
+            alert("Wrong T_T\n" + sents[id]);
+            wronglist.push(id);document.open();
+            display();
+        }
+
+        function fun0 (){
+            if (0 == ans){
+                doright();
+            } else {
+                dowrong();
+            }
+        }
+
+        function fun1 (){
+            if (1 == ans){
+                doright();
+            } else {
+                dowrong();
+            }
+        }
+        function fun2 (){
+            if (2 == ans){
+                doright();
+            } else {
+                dowrong();
+            }
+        }
+        function fun3 (){
+            if (3 == ans){
+                doright();
+            } else {
+                dowrong();
+            }
+        }
+        function fun4 (){
+            if (4 == ans){
+                doright();
+            } else {
+                dowrong();
+            }
+        }
+        function display() {
+            // for (var i = 0;i < sents.length; i ++) {
+            //     document.write("<p>" + (i+1) + " : " + sents[i].split(" ")+ "</p>");
+            // }
+            // var l = sents[0].split(" ");
+            // document.write("<p>" + l + "</p>");
+            // for (k in l){
+            //     document.write("<p>" + l[k] + "</p>");
+            // }
+            document.write("<style>input[type=button], input[type=submit], input[type=reset] {background-color: #003366;border: none;color: white;padding: 4px 8px;margin: 4px 2px;cursor: pointer;font-size: 5pt;</style>");
+            var four = [];
+            for (var i = 0;i < 5;i ++){
+                var j = Math.floor(Math.random()*choices.length);
+                four.push(choices[j]);
+            }
+
+            id = Math.floor(Math.random()*sents.length);
+            var arr = sents[id].split(" ");
+
+            var pos = Math.floor(Math.random()*arr.length);
+
+            ans = Math.floor(Math.random()*5);
+            four[ans] = arr[pos];
+            arr[pos] = "____";
+
+            document.write("<h1> Quiz " + (id + 1) + ". " + arr.join(" ") + "</h1>");
+            for (var i = 0;i < 5;i ++){
+                var num = String.fromCharCode(65+i);
+                document.write("<h2> "+ num + ". <input id=\"button\" type=\"button\" style='font-size:25px' onclick=\"fun" + i+"();\" value=\"" + four[i] + "\"> </h2>");
+            }
+
+            // <input  id="button" type="button" value="点击" onclick="buttonClick();"> 
+            document.write("<hr/><h4>快去复习错误的俗语:</h4>");
+            for (var i in wronglist) {
+                document.write("<font color='red'><p>" + (wronglist[i]+1) + ". " + sents[wronglist[i]] + "</p></font>");
+            } 
+        }
+
+    </script>
+    <title>JavaScript Objects</title>
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">DZY</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/12/hello-world/" class="article-date">
-  <time datetime="2018-03-12T14:51:53.735Z" itemprop="datePublished">2018-03-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/12/hello-world/">Hello World</a>
-    </h1>
-  
+<script language="JavaScript">
+    getallchoice();
+    display();
+</script>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/12/hello-world/" data-id="cjeod2i090000aynos85jkcrw" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/03/12/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
 </body>
 </html>
