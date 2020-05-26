@@ -78,13 +78,32 @@
         var C_W=0;
         var C_C=0;
 
-
+		function IsPC() {
+		   var userAgentInfo = navigator.userAgent;
+		   var Agents = ["Android", "iPhone",
+		      "SymbianOS", "Windows Phone",
+		      "iPad", "iPod"];
+		   var flag = true;
+		   for (var v = 0; v < Agents.length; v++) {
+		      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+		         flag = false;
+		         break;
+		      }
+		   }
+		   return flag;
+		}
+		var sz;
         function getallchoice() {
             for (var i = 0;i < sents.length; i ++) {
                 var l = sents[i].split(" ");
                 for (k in l) {
                     choices.push(l[k]);
                 }
+            }
+            if (IsPC()){
+            	sz="30";
+            } else {
+            	sz="60";
             }
             // for (k in choices){
             //     document.write("<p>" + choices[k] + "</p>");
@@ -166,10 +185,10 @@
             four[ans] = arr[pos];
             arr[pos] = "____";
 
-            document.write("<h1 style='font-size:60px'> Quiz " + (id + 1) + ". " + arr.join(" ") + "</h1>");
+            document.write("<h1 style='font-size:"+sz+"px'> Quiz " + (id + 1) + ". " + arr.join(" ") + "</h1>");
             for (var i = 0;i < 5;i ++){
                 var num = String.fromCharCode(65+i);
-                document.write("<h2 style='font-size:60px' id=choice" + i + "\"> "+ num + ". <input id=\"button\" type=\"button\" style='font-size:60px' onclick=\"fun" + i+"();\" value=\"" + four[i] + "\"></h2> ");
+                document.write("<h2 style='font-size:"+sz+"px' id=choice" + i + "\"> "+ num + ". <input id=\"button\" type=\"button\" style='font-size:"+sz+"px' onclick=\"fun" + i+"();\" value=\"" + four[i] + "\"></h2> ");
             }
 
             document.write("<hr/><h5>正确：<font color='green'>"+C_R+"</font>");
