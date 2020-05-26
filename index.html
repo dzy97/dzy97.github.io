@@ -166,10 +166,10 @@
             four[ans] = arr[pos];
             arr[pos] = "____";
 
-            document.write("<h1> Quiz " + (id + 1) + ". " + arr.join(" ") + "</h1>");
+            document.write("<h1 style='font-size:60px'> Quiz " + (id + 1) + ". " + arr.join(" ") + "</h1>");
             for (var i = 0;i < 5;i ++){
                 var num = String.fromCharCode(65+i);
-                document.write("<h2 id=choice" + i + "\"> "+ num + ". <input id=\"button\" type=\"button\" style='font-size:25px' onclick=\"fun" + i+"();\" value=\"" + four[i] + "\"></h2> ");
+                document.write("<h2 style='font-size:60px' id=choice" + i + "\"> "+ num + ". <input id=\"button\" type=\"button\" style='font-size:60px' onclick=\"fun" + i+"();\" value=\"" + four[i] + "\"></h2> ");
             }
 
             document.write("<hr/><h5>正确：<font color='green'>"+C_R+"</font>");
