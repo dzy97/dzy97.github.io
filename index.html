@@ -5,7 +5,7 @@
 
     <title>Practice</title>
     <script language="JavaScript">
-        var sents = ["가는날이 장날이다",
+    	var sents = ["가는날이 장날이다",
 "가는 말이 고와야 오는 말이 곱지",
 "가랑비에 옷 젖는 줄 모른다",
 "가재는 게 편이다",
@@ -74,6 +74,9 @@
         var ans;
         var wronglist = [];
         var id;
+        var C_R=0;
+        var C_W=0;
+        var C_C=0;
 
 
         function getallchoice() {
@@ -89,10 +92,14 @@
             // document.write("<p>"+choices.length + "</p>");
         }
         function doright(){
-            alert("Right ^_^");document.open();
+        	C_C+=1;
+        	C_R+=1;
+            document.open();
             display();
         }
         function dowrong(){
+        	C_C+=1;
+        	C_W+=1;
             alert("Wrong T_T\n" + sents[id]);
             wronglist.push(id);document.open();
             display();
@@ -162,9 +169,17 @@
             document.write("<h1> Quiz " + (id + 1) + ". " + arr.join(" ") + "</h1>");
             for (var i = 0;i < 5;i ++){
                 var num = String.fromCharCode(65+i);
-                document.write("<h2> "+ num + ". <input id=\"button\" type=\"button\" style='font-size:25px' onclick=\"fun" + i+"();\" value=\"" + four[i] + "\"> </h2>");
+                document.write("<h2 id=choice" + i + "\"> "+ num + ". <input id=\"button\" type=\"button\" style='font-size:25px' onclick=\"fun" + i+"();\" value=\"" + four[i] + "\"></h2> ");
             }
 
+            document.write("<hr/><h5>正确：<font color='green'>"+C_R+"</font>");
+            document.write(" 错误：<font color='red'>"+C_W+"</font>");
+            if (C_C>0){
+            document.write(" 正确率：	<font color='blue'>"+(Math.floor(10000*C_R/C_C)/100)+"%</font></h5>");
+ 
+            } else {
+            	document.write("</h5>");
+            }
             // <input  id="button" type="button" value="点击" onclick="buttonClick();"> 
             document.write("<hr/><h4>快去复习错误的俗语:</h4>");
             for (var i in wronglist) {
@@ -172,14 +187,12 @@
             } 
         }
 
+
     </script>
-    <title>JavaScript Objects</title>
 </head>
 <body>
-<script language="JavaScript">
-    getallchoice();
-    display();
-</script>
+<script language="JavaScript">getallchoice();
+    display();</script>
 
 </body>
 </html>
