@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Zheye&#39;s Homepage | Zheye Deng</title>
+    <title>Zheye Deng 邓哲也 | Zheye Deng</title>
     <link>https://dzy97.github.io/</link>
       <atom:link href="https://dzy97.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <description>Zheye&#39;s Homepage</description>
+    <description>Zheye Deng 邓哲也</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dzy97.github.io/media/icon_hu7b1a516f857595068c44cc9dea94e798_64148_512x512_fill_lanczos_center_3.png</url>
-      <title>Zheye&#39;s Homepage</title>
+      <title>Zheye Deng 邓哲也</title>
       <link>https://dzy97.github.io/</link>
     </image>
     
@@ -279,7 +279,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-693271548&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-486532917&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -289,7 +289,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-693271548&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-486532917&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
