@@ -9,36 +9,36 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "Zheye Deng 邓哲也"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+name                     : &name "Zheye Deng"
+description              : &description "PhD Student @ HKUST"
+url                      : https://dzy97.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "dzy97/dzy97.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "avatar.jpg"
+  name             : "Zheye Deng"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "PhD Student @ HKUST"
+  location         : "Hong Kong"
+  employer         : "HKUST"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "zdengah@connect.ust.hk" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=KMdHnBgAAAAJ"
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
-  semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  orcid            : # "http://orcid.org/yourorcidurl"
+  semantic         : "https://www.semanticscholar.org/author/Zheye-Deng/2260296509"
+  pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
 
@@ -46,13 +46,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
-  kaggle           : # Username  
+  github           : "dzy97"
+  kaggle           : "dzy97122"  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # "bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -133,7 +133,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : 
 facebook:
   username               :
   app_id                 :
@@ -215,76 +215,76 @@ kramdown:
 
 
 # These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+# collections:
+#   # teaching:
+#   #   output: true
+#   #   permalink: /:collection/:path/
+#   publications:
+#     output: true
+#     permalink: /:collection/:path/
+#   # portfolio:
+#   #   output: true
+#   #   permalink: /:collection/:path/
+#   # talks:
+#   #   output: true
+#   #   permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+# defaults:
+#   # _posts
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       layout: single
+#       author_profile: true
+#       read_time: true
+#       comments: true
+#       share: true
+#       related: true
+#   # _pages
+#   - scope:
+#       path: ""
+#       type: pages
+#     values:
+#       layout: single
+#       author_profile: true
+#   # # _teaching
+#   # - scope:
+#   #     path: ""
+#   #     type: teaching
+#   #   values:
+#   #     layout: single
+#   #     author_profile: true
+#   #     share: true
+#   #     comments: true
+#   # _publications
+#   - scope:
+#       path: ""
+#       type: publications
+#     values:
+#       layout: single
+#       author_profile: true
+#       share: true
+#       comments: true
+#   # # _portfolio
+#   # - scope:
+#   #     path: ""
+#   #     type: portfolio
+#   #   values:
+#   #     layout: single
+#   #     author_profile: true
+#   #     share: true
+#   #     comment: true
+#   # # _talks
+#   # - scope:
+#   #     path: ""
+#   #     type: talks
+#   #   values:
+#   #     layout: talk
+#   #     author_profile: true
+#   #     share: true
 
 
 # Sass/SCSS
